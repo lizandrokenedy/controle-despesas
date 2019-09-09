@@ -1,0 +1,19 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Alimentação",
+      "description": "Pizza, lanches e outros"
+    },
+    {
+      "id": 2,
+      "name": "Transporte",
+      "description": "Uber e 99Pop"
+    },
+    {
+      "id": 3,
+      "name": "Farmácia",
+      "description": "Remédios, higiene pessoal e outros"
+    }
+  ]
+}
