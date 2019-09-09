@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoryService } from './pages/categories/shared/category.service';
+import { EntryService } from './pages/entries/shared/entry.service';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { CategoryService } from './pages/categories/shared/category.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [CategoryService],
+  providers: [CategoryService, EntryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
