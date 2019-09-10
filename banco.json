@@ -16,5 +16,51 @@
       "description": "Remédios, higiene pessoal e outros"
     }
   ],
-  "entries": []
+  "entries": [
+    {
+      "id": 1,
+      "name": "Uber",
+      "description": "Uber trabalho",
+      "type": "expense",
+      "amount": "700,00",
+      "date": "07/10/2019",
+      "paid": false,
+      "categoryId": "2",
+      "category": {
+        "id": 2,
+        "name": "Transporte",
+        "description": "Uber e 99Pop"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Alimentação",
+      "description": "Pizza, lanches e outros",
+      "type": "expense",
+      "amount": "1400,00",
+      "date": "10/09/2019",
+      "paid": false,
+      "categoryId": "1",
+      "category": {
+        "id": 1,
+        "name": "Alimentação",
+        "description": "Pizza, lanches e outros"
+      }
+    },
+    {
+      "id": 4,
+      "name": "teste",
+      "description": "123",
+      "type": "revenue",
+      "amount": "1500,00",
+      "date": "13/09/2019",
+      "paid": true,
+      "categoryId": "1",
+      "category": {
+        "id": 1,
+        "name": "Alimentação",
+        "description": "Pizza, lanches e outros"
+      }
+    }
+  ]
 }
