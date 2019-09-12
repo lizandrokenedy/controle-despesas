@@ -14,6 +14,26 @@
       "id": 3,
       "name": "Farmácia",
       "description": "Remédios, higiene pessoal e outros"
+    },
+    {
+      "id": 4,
+      "name": "Cartão de Crédito",
+      "description": "Despesas gerais"
+    },
+    {
+      "id": 5,
+      "name": "Freelancers",
+      "description": "Trabalhos extras"
+    },
+    {
+      "id": 6,
+      "name": "teste2",
+      "description": "123"
+    },
+    {
+      "id": 7,
+      "name": "teste3",
+      "description": "teste3"
     }
   ],
   "entries": [
@@ -48,18 +68,33 @@
       }
     },
     {
-      "id": 4,
-      "name": "teste",
-      "description": "123",
-      "type": "revenue",
-      "amount": "1500,00",
-      "date": "13/09/2019",
-      "paid": true,
-      "categoryId": "1",
+      "id": 3,
+      "name": "Gastos Cartão de Crédito",
+      "description": null,
+      "type": "expense",
+      "amount": "2100,00",
+      "date": "07/10/2019",
+      "paid": false,
+      "categoryId": "4",
       "category": {
-        "id": 1,
-        "name": "Alimentação",
-        "description": "Pizza, lanches e outros"
+        "id": 4,
+        "name": "Cartão de Crédito",
+        "description": "Despesas gerais"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Teste",
+      "description": null,
+      "type": "revenue",
+      "amount": "1000,00",
+      "date": "30/09/2019",
+      "paid": false,
+      "categoryId": "7",
+      "category": {
+        "id": 7,
+        "name": "teste3",
+        "description": "teste3"
       }
     }
   ]
