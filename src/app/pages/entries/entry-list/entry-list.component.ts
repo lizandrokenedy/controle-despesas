@@ -19,14 +19,14 @@ export class EntryListComponent implements OnInit {
         this.entries = entries.sort((a, b) => b.id - a.id)
       },
       (error: Error) => {
-        alert('Não foi possível carregar as categorias.')
+        alert('Não foi possível carregar os lançamentos.')
       }
     )
   }
 
   deleteEntry(entry: Entry): void {
 
-    const mustDelete = confirm(`Deseja realmente excluir esta categoria: ${entry.name}?`)
+    const mustDelete = confirm(`Deseja realmente excluir este lançamento: ${entry.name}?`)
 
     if (mustDelete) {
       this.entryService.delete(entry.id).subscribe(

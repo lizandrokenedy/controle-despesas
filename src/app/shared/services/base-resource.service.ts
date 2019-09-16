@@ -8,57 +8,62 @@ export abstract class BaseResourceService<T extends BaseResourceModel> {
 
     protected http: HttpClient
 
-    constructor(protected API_URL: string, protected injector: Injector){
+    constructor(
+        protected API_URL: string,
+        protected injector: Injector,
+        protected jsonDataToResourceFn: (jsonData) => T
+    ) {
         this.http = injector.get(HttpClient)
     }
 
     getAll(): Observable<T[]> {
         return this.http.get(this.API_URL).pipe(
-            catchError(this.handleError),
-            map(this.jsonDataToResources)
+            map(this.jsonDataToResources.bind(this)),
+            catchError(this.handleError)          
         )
     }
 
     getById(id: number): Observable<T> {
         const url = `${this.API_URL}/${id}`;
         return this.http.get(url).pipe(
-            catchError(this.handleError),
-            map(this.jsonDataToResource)
+            map(this.jsonDataToResource.bind(this)),
+            catchError(this.handleError)      
         )
     }
 
     create(resource: T): Observable<T> {
         return this.http.post(this.API_URL, resource).pipe(
-            catchError(this.handleError),
-            map(this.jsonDataToResource)
+            map(this.jsonDataToResource.bind(this)),
+            catchError(this.handleError)          
         )
     }
 
     update(resource: T): Observable<T> {
         const url = `${this.API_URL}/${resource.id}`
         return this.http.put(url, resource).pipe(
-            catchError(this.handleError),
-            map(() => resource)
+            map(() => resource),
+            catchError(this.handleError)
+            
         )
     }
 
     delete(id: number): Observable<any> {
         const url = `${this.API_URL}/${id}`
         return this.http.delete(url).pipe(
-            catchError(this.handleError),
-            map(() => null)
+            map(() => null),
+            catchError(this.handleError)         
         )
     }
 
 
     protected jsonDataToResources(jsonData: any[]): T[] {
         const resources: T[] = []
-        jsonData.forEach(element => resources.push(element as T))
+        jsonData.forEach(element => resources.push(this.jsonDataToResourceFn(element)))
         return resources
     }
 
     protected jsonDataToResource(jsonData: any): T {
-        return jsonData as T
+        return this.jsonDataToResourceFn(jsonData)
     }
 
     protected handleError(error: any): Observable<any> {
