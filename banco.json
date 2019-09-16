@@ -29,11 +29,6 @@
       "id": 6,
       "name": "teste2",
       "description": "123"
-    },
-    {
-      "id": 7,
-      "name": "teste3",
-      "description": "teste3"
     }
   ],
   "entries": [
@@ -80,21 +75,6 @@
         "id": 4,
         "name": "Cartão de Crédito",
         "description": "Despesas gerais"
-      }
-    },
-    {
-      "id": 4,
-      "name": "Teste",
-      "description": null,
-      "type": "revenue",
-      "amount": "1000,00",
-      "date": "30/09/2019",
-      "paid": false,
-      "categoryId": "7",
-      "category": {
-        "id": 7,
-        "name": "teste3",
-        "description": "teste3"
       }
     }
   ]
