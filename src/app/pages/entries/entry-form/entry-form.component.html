@@ -38,10 +38,11 @@
                     <label for="type">Tipo</label>
                     <select name="type" id="type" formControlName="type" class="form-control">
                         <option *ngFor="let option of typesOptions" [value]="option.value">{{ option.text }}</option>
-                        
+
                     </select>
 
-                    <div class="text-danger" *ngIf="resourceForm.get('type').invalid && resourceForm.get('type').touched">
+                    <div class="text-danger"
+                        *ngIf="resourceForm.get('type').invalid && resourceForm.get('type').touched">
                         <div *ngIf="resourceForm.get('type').errors.required">
                             Campo obrigatório
                         </div>
@@ -51,7 +52,8 @@
                 <div class="form-group col-md-5">
                     <label for="name">Laçamento</label>
                     <input type="text" class="form-control" id="name" formControlName="name">
-                    <div class="text-danger" *ngIf="resourceForm.get('name').invalid && resourceForm.get('name').touched">
+                    <div class="text-danger"
+                        *ngIf="resourceForm.get('name').invalid && resourceForm.get('name').touched">
                         <div *ngIf="resourceForm.get('name').errors.required">
                             Campo obrigatório
                         </div>
@@ -71,7 +73,8 @@
                         <input [imask]="imaskConfig" type="text" class="form-control text-right" id="amount"
                             formControlName="amount">
                     </div>
-                    <div class="text-danger" *ngIf="resourceForm.get('amount').invalid && resourceForm.get('amount').touched">
+                    <div class="text-danger"
+                        *ngIf="resourceForm.get('amount').invalid && resourceForm.get('amount').touched">
                         <div *ngIf="resourceForm.get('amount').errors.required">
                             Campo obrigatório
                         </div>
@@ -84,7 +87,8 @@
                     <p-calendar id="date" formControlName="date" inputStyleClass="form-control" dataType="string"
                         dateFormat="dd/mm/yy" [locale]="ptBR" [showButtonBar]="true">
                     </p-calendar>
-                    <div class="text-danger" *ngIf="resourceForm.get('date').invalid && resourceForm.get('date').touched">
+                    <div class="text-danger"
+                        *ngIf="resourceForm.get('date').invalid && resourceForm.get('date').touched">
                         <div *ngIf="resourceForm.get('date').errors.required">
                             Campo obrigatório
                         </div>
@@ -106,7 +110,8 @@
                             class="btn btn-outline-info">Pendente</label>
                     </div>
 
-                    <div class="text-danger" *ngIf="resourceForm.get('paid').invalid && resourceForm.get('paid').touched">
+                    <div class="text-danger"
+                        *ngIf="resourceForm.get('paid').invalid && resourceForm.get('paid').touched">
                         <div *ngIf="resourceForm.get('paid').errors.required">
                             Campo obrigatório
                         </div>

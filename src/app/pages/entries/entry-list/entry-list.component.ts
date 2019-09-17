@@ -13,5 +13,5 @@ export class EntryListComponent extends BaseResourceListComponent<Entry> {
   constructor(protected entryService: EntryService) {
     super(entryService)
    }
-
+   
 }
