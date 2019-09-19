@@ -76,6 +76,21 @@
         "name": "Cartão de Crédito",
         "description": "Despesas gerais"
       }
+    },
+    {
+      "id": 4,
+      "name": "freela",
+      "description": null,
+      "type": "revenue",
+      "amount": "5000",
+      "date": "16/10/2019",
+      "paid": true,
+      "categoryId": "5",
+      "category": {
+        "id": 5,
+        "name": "Freelancers",
+        "description": "Trabalhos extras"
+      }
     }
   ]
 }

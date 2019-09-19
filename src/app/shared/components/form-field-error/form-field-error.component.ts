@@ -40,7 +40,7 @@ export class FormFieldErrorComponent implements OnInit {
     }
     else if(this.formControl.errors.minlength) {
       const requiredLength = this.formControl.errors.minlength.requiredLength
-      return `Minímo ${requiredLength} caracteres`
+      return `Mínimo ${requiredLength} caracteres`
     }
     else if(this.formControl.errors.maxlength) {
       const requiredLength = this.formControl.errors.maxlength.requiredLength
