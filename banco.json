@@ -26,9 +26,9 @@
       "description": "Trabalhos extras"
     },
     {
-      "id": 6,
-      "name": "teste",
-      "description": "1237"
+      "id": 7,
+      "name": "Extras",
+      "description": null
     }
   ],
   "entries": [
@@ -82,7 +82,7 @@
       "name": "freela",
       "description": null,
       "type": "revenue",
-      "amount": "5000",
+      "amount": "5000,00",
       "date": "16/10/2019",
       "paid": true,
       "categoryId": "5",
@@ -90,6 +90,21 @@
         "id": 5,
         "name": "Freelancers",
         "description": "Trabalhos extras"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Receitas extras",
+      "description": null,
+      "type": "revenue",
+      "amount": "2100,00",
+      "date": "23/10/2019",
+      "paid": true,
+      "categoryId": "7",
+      "category": {
+        "id": 7,
+        "name": "Extras",
+        "description": null
       }
     }
   ]

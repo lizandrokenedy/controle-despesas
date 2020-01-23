@@ -21,7 +21,7 @@ import { ServerErrorMessagesComponent } from './components/server-error-messages
     PageHeaderComponent,
     ServerErrorMessagesComponent,
     FormFieldErrorComponent,
-    RouterModule
+    RouterModule,
   ]
 })
 export class SharedModule { }
